@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Đăng nhập</title>
+<link rel="icon" href="Logo_hoc_vien_ANND.png" type="image/png" >
+<link href="style_index.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="loginbox">
+		<div class="logo"><img src="./Logo_hoc_vien_ANND.png" alt="Logo" width="100" height="100"/></div>
+		<div class="login"><h1>Đăng nhập</h1></div>
+		<div class="inputbox">
+			<input type="text" class="username" placeholder="Tên đăng nhập"><br>
+			<input type="password" class="password" placeholder="Mật khẩu">
+		</div>
+		<button class="loginbutton">Đăng nhập</button>
+		<a href="#" id="showAlert" class="forgotpassword"><span>Quên mật khẩu?</span></a>
+	</div>
+	
+	
+							<!-- Phần đây quyết định cho thuộc tính của pop up  -->
+	
+	<div id="alertPopup" class="alert-popup">
+    	<div class="alert-box">
+        	<h1>Yêu cầu không hợp lệ!</h1>
+        	<h3>Vui lòng liên hệ Phòng Tổ chức cán bộ để được cấp lại mật khẩu</h3>
+        	<button id="alertClose">Đóng</button>
+    	</div>
+	</div>
+
+	
+<script>
+    const popup = document.getElementById("alertPopup");
+    const open = document.getElementById("showAlert");
+    const close = document.getElementById("alertClose");
+
+    open.onclick = () => popup.classList.add("show");
+    close.onclick = () => popup.classList.remove("show");
+</script>
+	
+</body>
+</html>

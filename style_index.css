@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+body
+{
+	background: url("./r-1745562029.jpg");
+	background-size: cover;
+	background-repeat:no-repeat;
+}
+.loginbox
+{
+	width: 300px;           
+    padding: 20px;
+    background-color:rgba(255,255,255,0.5);    
+    border-radius: 15px;        
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin: 50px auto;         
+    display: flex;                
+    flex-direction: column;      
+    gap: 15px; 
+	text-align:center;
+	justify-content: flex-end;
+	margin-top:18vh;
+}
+.login
+{
+	font-size:20px;
+	user-select: none;
+	margin-bottom:-20px;
+}
+.username
+{
+	box-sizing:border-box;
+	height:50px;
+	width:295px;
+	font-size:20px;
+	margin-bottom:12px;
+	border-radius:12px;
+	border:1px solid #ccc;
+	padding:10px;
+}
+.password
+{
+	box-sizing:border-box;
+	height:50px;
+	width:295px;
+	font-size:20px;
+	margin-bottom:12px;
+	border-radius:12px;
+	border:1px solid #ccc;
+	padding:10px;
+}
+.loginbutton
+{
+	height:50px;
+	width:298px;
+	font-size:20px;
+	margin-bottom:-5px;
+	border-radius:12px;
+	border:1px solid #ccc;
+	background: rgba(8,102,255,1.00);
+	font-family: sans-serif;
+	color:white;
+	cursor:pointer;
+	transition: all 0.3s ease;
+}
+.loginbutton:hover
+{
+	background:white;
+	color:black;
+	transform: scale(1.05);
+}
+.logo
+{
+	-webkit-user-drag: none;
+	margin-bottom:-30px;
+	user-select:none;
+	margin-left:-5px;
+	pointer-events: none;
+}
+.forgotpassword
+{
+	user-select:none;
+	text-decoration:none;
+	text-align:center;
+	cursor:pointer;
+	margin-bottom:-30px;
+	background: none;
+	border: none;
+    font: inherit;
+    display: inline;        
+    padding: 0;          
+    margin: 0;      
+	font-size:18px;
+	pointer-events: none;
+	color:blue;
+}
+.forgotpassword span
+{
+	pointer-events: auto;
+}
+.forgotpassword:hover
+{
+	text-decoration: underline;
+}
+
+
+															/* Thuộc tính cho pop up*/
+															/* Thuộc tính cho pop up*/
+															/* Thuộc tính cho pop up*/
+															/* Thuộc tính cho pop up*/
+															/* Thuộc tính cho pop up*/
+															/* Thuộc tính cho pop up*/
+
+.alert-popup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.alert-popup.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.alert-box {
+    background:rgba(255,255,255,1.00);
+	width: 320px;
+    padding: 20px 25px;
+    border-radius: 12px;
+    min-width: 300px;
+    color: rgba(0,0,0,1.00);
+    animation: alertPop 0.25s ease;
+	text-align: center;
+}
+@keyframes alertPop {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.alert-box button {
+    margin-top: 15px;
+    padding: 8px 15px;
+    background:rgba(228,230,235,1);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
