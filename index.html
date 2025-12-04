@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <title>Đăng nhập</title>
-<link rel="icon" href="Logo_hoc_vien_ANND.png" type="image/png" >
+<link rel="icon" href="Logo_hoc_vien_ANND.png" type="image/png">
 <link href="style_index.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -15,7 +16,7 @@
 			<input type="text" class="username" placeholder="Tên đăng nhập"><br>
 			<input type="password" class="password" placeholder="Mật khẩu">
 		</div>
-		<button class="loginbutton">Đăng nhập</button>
+		<button class="loginbutton" id="loginbutton">Đăng nhập</button>
 		<a href="#" id="showAlert" class="forgotpassword"><span>Quên mật khẩu?</span></a>
 	</div>
 	
@@ -40,5 +41,37 @@
     close.onclick = () => popup.classList.remove("show");
 </script>
 	
+										<!-- Phần đây quyết định cho thuộc tính của pop up login success/failed  -->
+<div id="popup" class="popup">
+	  <div class="popup-content">
+	    <div class="icon-wrapper">
+	      <span class="circle"></span>
+	      <span class="x-mark">×</span>
+	      <span class="check-mark">✓</span>
+	    </div>
+	    <p id="popup-text" class="popup-text">Đăng nhập thành công</p>
+	  </div>
+</div>
+
+<script>
+document.getElementById("loginbutton").onclick = function() {
+	  const popup = document.getElementById("popup");
+	  popup.classList.add("show");
+
+	  const circle = popup.querySelector(".circle");
+	  const x = popup.querySelector(".x-mark");
+	  const check = popup.querySelector(".check-mark");
+	  circle.style.animation = 'none';
+	  x.style.animation = 'none';
+	  check.style.animation = 'none';
+	  setTimeout(() => {
+	    circle.style.animation = '';
+	    x.style.animation = '';
+	    check.style.animation = '';
+	  }, 10);
+
+	  setTimeout(() => popup.classList.remove("show"), 2500);
+};
+</script>
 </body>
 </html>
