@@ -5,6 +5,7 @@ body
 	background: url("./r-1745562029.jpg");
 	background-size: cover;
 	background-repeat:no-repeat;
+	background-position: center;
 }
 .loginbox
 {
@@ -158,3 +159,13 @@ body
     border-radius: 6px;
     cursor: pointer;
 }
+
+.alert-box button:hover
+{
+	background: rgba(158,165,183,1.00);
+}
+
+
+
+
+													/*Thuộc tính cho dấu tick*/
